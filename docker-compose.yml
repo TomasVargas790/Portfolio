@@ -1,0 +1,23 @@
+services:
+  portfolio:
+    container_name: portfolio
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    restart: always
+    volumes:
+     - /opt/apps/portfolio:/app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`vargastomas.com`)"
+      - "traefik.http.routers.portfolio.middlewares=stripprefix-portfolio"
+      - "traefik.http.middlewares.stripprefix-portfolio.stripprefix.prefixes=/"
+      - "traefik.http.routers.portfolio.entrypoints=web,websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=myresolver"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+    networks:
+      - net-nammu
+
+networks:
+  net-nammu:
+    external: true

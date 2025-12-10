@@ -1,0 +1,23 @@
+# Dockerfile de desarrollo con pnpm
+FROM node:20-alpine
+
+# Instalar pnpm globalmente
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# Establecer directorio de trabajo
+WORKDIR /app
+
+# Copiar archivos de dependencias
+COPY package.json pnpm-lock.yaml* ./
+
+# Instalar dependencias
+RUN pnpm install --frozen-lockfile
+
+# Copiar el resto del código
+COPY . .
+
+# Exponer puertos 80 y 443 para Traefik
+EXPOSE 80 443
+
+# Comando para iniciar el servidor de desarrollo en puerto 80
+CMD ["pnpm", "dev", "--host", "--port", "80"]
