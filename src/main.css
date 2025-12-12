@@ -76,3 +76,74 @@ html {
         transform: translateY(0%);
     }
 }
+
+/* ========================================
+   🎨 DESIGN SYSTEM - Common Styles
+   ======================================== */
+
+/* Cards */
+.card {
+    @apply relative bg-background-card border border-border rounded-lg p-6 shadow-lg;
+    @apply hover:shadow-xl transition-all duration-300 overflow-hidden;
+}
+
+.card-hover-lift {
+    @apply hover:scale-105;
+}
+
+.card-hover-lift-sm {
+    @apply hover:scale-[1.02];
+}
+
+/* Card Glow Effect */
+.card-glow {
+    @apply absolute inset-0 bg-gradient-to-r from-primary-500/0 to-accent-500/0;
+    @apply group-hover:from-primary-500/5 group-hover:to-accent-500/5;
+    @apply rounded-lg transition-all duration-300 pointer-events-none;
+}
+
+/* Badges / Pills */
+.badge {
+    @apply px-3 py-1 text-xs bg-primary-500/10 text-primary-700;
+    @apply rounded-full border border-primary-500/20;
+}
+
+.badge-sm {
+    @apply px-2 py-0.5 text-xs;
+}
+
+/* Gradient Divider */
+.gradient-divider {
+    @apply h-1 w-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto;
+}
+
+/* Typography */
+.heading-primary {
+    @apply text-4xl md:text-5xl font-bold text-text;
+}
+
+.heading-secondary {
+    @apply text-xl font-bold text-text;
+}
+
+.heading-accent {
+    @apply text-xl font-bold text-primary-600;
+}
+
+.text-description {
+    @apply text-lg text-text/60;
+}
+
+.text-muted {
+    @apply text-sm text-muted-foreground;
+}
+
+.text-subtle {
+    @apply text-sm text-text/60 leading-relaxed;
+}
+
+/* Links */
+.link-primary {
+    @apply inline-flex items-center gap-2 text-sm text-primary-600;
+    @apply hover:text-primary-700 font-medium transition-colors duration-200;
+}

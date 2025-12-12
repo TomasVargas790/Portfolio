@@ -37,11 +37,11 @@ export function Section({
             <div className={`${maxWidthClasses[maxWidth]} mx-auto`}>
                 {/* Section Header */}
                 <div className={`text-center ${headerSpacingClasses[headerSpacing]}`}>
-                    <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">
+                    <h2 className="heading-primary mb-4">
                         {title}
                     </h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto"></div>
-                    <p className="mt-4 text-lg text-text/60 max-w-2xl mx-auto">
+                    <div className="gradient-divider"></div>
+                    <p className="mt-4 text-description max-w-2xl mx-auto">
                         {description}
                     </p>
                 </div>

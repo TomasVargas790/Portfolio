@@ -13,13 +13,13 @@ interface CertificationCardProps {
 
 export function CertificationCard({ certification }: CertificationCardProps) {
     return (
-        <div className="group bg-background-card border border-border rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
+        <div className="group card card-hover-lift-sm">
             {/* Glow effect on hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-lg transition-all duration-300 pointer-events-none"></div>
+            <div className="card-glow"></div>
 
             <div className="relative z-10">
                 {/* Certification Name */}
-                <h3 className="text-xl font-bold text-text mb-2">
+                <h3 className="heading-secondary mb-2">
                     {certification.name}
                 </h3>
 
@@ -29,7 +29,7 @@ export function CertificationCard({ certification }: CertificationCardProps) {
                 </p>
 
                 {/* Date */}
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-muted mb-4">
                     {certification.date}
                 </p>
 
@@ -46,7 +46,7 @@ export function CertificationCard({ certification }: CertificationCardProps) {
                         {certification.skills.map((skill, index) => (
                             <span
                                 key={index}
-                                className="px-3 py-1 text-xs bg-primary-500/10 text-primary-700 rounded-full border border-primary-500/20"
+                                className="badge"
                             >
                                 {skill}
                             </span>
@@ -60,7 +60,7 @@ export function CertificationCard({ certification }: CertificationCardProps) {
                         href={certification.credentialUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm text-primary-600 hover:text-primary-700 font-medium transition-colors duration-200"
+                        className="link-primary"
                     >
                         <span>Ver Certificado</span>
                         <svg

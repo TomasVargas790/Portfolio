@@ -20,7 +20,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ company, isLast }: ExperienceCardProps) {
     return (
-        <div className="relative flex gap-6">
+        <div className="group relative flex gap-6">
             {/* Timeline */}
             <div className="flex flex-col items-center">
                 {/* Circle/Dot */}
@@ -58,7 +58,7 @@ export function ExperienceCard({ company, isLast }: ExperienceCardProps) {
                                     </h4>
 
                                     {/* Position Dates */}
-                                    <p className="text-sm text-muted-foreground mb-3">
+                                    <p className="text-muted mb-3">
                                         {position.startDate} - {position.endDate}
                                     </p>
 
@@ -86,9 +86,7 @@ export function ExperienceCard({ company, isLast }: ExperienceCardProps) {
 }
 
 function Badge({ tech }: { tech: string }) {
-    return <span
-        className="px-3 py-1 text-sm bg-primary-500/10 text-primary-700 rounded-full border border-primary-500/20"
-    >
+    return <span className="badge">
         {tech}
     </span>
 }
