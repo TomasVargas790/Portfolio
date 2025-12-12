@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* <Header /> */}
 
             {/* Contenido de la página */}
-            <main className="container mx-auto px-4 py-8">
+            <main className="container mx-auto">
                 {children}
             </main>
 
