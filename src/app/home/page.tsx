@@ -1,4 +1,6 @@
 import { Hero } from "./components/Hero";
+import { Studies } from "./components/Studies/Studies";
+import { Experience } from "./components/Experience/Experience";
 
 export function HomePage() {
 
@@ -6,6 +8,10 @@ export function HomePage() {
         <div>
 
             <Hero />
+
+            <Studies />
+
+            <Experience />
 
         </div>
     )
