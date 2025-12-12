@@ -3,14 +3,15 @@ import { ProfileImage } from './Hero/ProfileImage';
 import { CTAButtons } from './Hero/CTAButtons';
 import { ScrollIndicator } from './Hero/ScrollIndicator';
 
+const ctaButtons = [
+    { href: '#projects', label: 'Ver Proyectos', variant: 'primary' as const },
+    { href: '#contact', label: 'Contacto', variant: 'outline' as const }
+];
+
 export function Hero() {
-    const ctaButtons = [
-        { href: '#projects', label: 'Ver Proyectos', variant: 'primary' as const },
-        { href: '#contact', label: 'Contacto', variant: 'outline' as const }
-    ];
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
             <AnimatedBackground />
 
             {/* Content */}

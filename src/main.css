@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 @theme {
     /* Colors - Responsive to light/dark mode */
     --color-text: light-dark(#1a1a1a, #e9e8fc);
