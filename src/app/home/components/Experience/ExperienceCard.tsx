@@ -2,7 +2,7 @@ interface Position {
     position: string;
     startDate: string;
     endDate: string;
-    description: string;
+    description?: string;
     technologies?: string[];
 }
 

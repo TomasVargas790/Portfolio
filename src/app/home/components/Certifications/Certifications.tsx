@@ -1,3 +1,4 @@
+import { Section } from '../Section';
 import { CertificationCard } from './CertificationCard';
 
 interface Certification {
@@ -43,26 +44,17 @@ const certifications: Certification[] = [
 
 export function Certifications() {
     return (
-        <section className="py-20 px-6" id="certifications">
-            <div className="max-w-6xl mx-auto">
-                {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">
-                        Certificaciones
-                    </h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto"></div>
-                    <p className="mt-4 text-lg text-text/60 max-w-2xl mx-auto">
-                        Certificaciones profesionales que validan mis habilidades técnicas
-                    </p>
-                </div>
-
-                {/* Certifications Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {certifications.map((certification, index) => (
-                        <CertificationCard key={index} certification={certification} />
-                    ))}
-                </div>
+        <Section
+            id="certifications"
+            title="Certificaciones"
+            description="Certificaciones profesionales que validan mis habilidades técnicas"
+        >
+            {/* Certifications Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {certifications.map((certification, index) => (
+                    <CertificationCard key={index} certification={certification} />
+                ))}
             </div>
-        </section>
+        </Section>
     );
 }

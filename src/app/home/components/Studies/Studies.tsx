@@ -1,3 +1,4 @@
+import { Section } from '../Section';
 import { StudyCard } from './StudyCard';
 
 interface Study {
@@ -38,26 +39,17 @@ const studies: Study[] = [
 
 export function Studies() {
     return (
-        <section className="py-20 px-6" id="studies">
-            <div className="max-w-6xl mx-auto">
-                {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">
-                        Educación
-                    </h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto"></div>
-                    <p className="mt-4 text-lg text-text/60 max-w-2xl mx-auto">
-                        Mi formación académica y certificaciones profesionales
-                    </p>
-                </div>
-
-                {/* Studies Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {studies.map((study, index) => (
-                        <StudyCard key={index} study={study} />
-                    ))}
-                </div>
+        <Section
+            id="studies"
+            title="Educación"
+            description="Mi formación académica y certificaciones profesionales"
+        >
+            {/* Studies Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {studies.map((study, index) => (
+                    <StudyCard key={index} study={study} />
+                ))}
             </div>
-        </section>
+        </Section>
     );
 }

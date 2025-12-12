@@ -1,10 +1,11 @@
+import { Section } from '../Section';
 import { ExperienceCard } from './ExperienceCard';
 
 interface Position {
     position: string;
     startDate: string;
     endDate: string;
-    description: string;
+    description?: string;
     technologies?: string[];
 }
 
@@ -55,30 +56,23 @@ const experience: CompanyExperience[] = [
 
 export function Experience() {
     return (
-        <section className="py-20 px-6" id="experience">
-            <div className="max-w-4xl mx-auto">
-                {/* Section Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-text mb-4">
-                        Experiencia
-                    </h2>
-                    <div className="h-1 w-24 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto"></div>
-                    <p className="mt-4 text-lg text-text/60 max-w-2xl mx-auto">
-                        Mi trayectoria profesional en desarrollo de software
-                    </p>
-                </div>
-
-                {/* Experience Timeline */}
-                <div className="relative">
-                    {experience.map((company, index) => (
-                        <ExperienceCard
-                            key={index}
-                            company={company}
-                            isLast={index === experience.length - 1}
-                        />
-                    ))}
-                </div>
+        <Section
+            id="experience"
+            title="Experiencia"
+            description="Mi trayectoria profesional en desarrollo de software"
+            maxWidth="4xl"
+            headerSpacing="large"
+        >
+            {/* Experience Timeline */}
+            <div className="relative">
+                {experience.map((company, index) => (
+                    <ExperienceCard
+                        key={index}
+                        company={company}
+                        isLast={index === experience.length - 1}
+                    />
+                ))}
             </div>
-        </section>
+        </Section>
     );
 }
