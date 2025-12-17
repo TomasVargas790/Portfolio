@@ -1,6 +1,7 @@
 import { AnimatedBackground } from './Hero/AnimatedBackground';
 import { ProfileImage } from './Hero/ProfileImage';
 import { ScrollIndicator } from './Hero/ScrollIndicator';
+import { SocialLinks } from './Hero/SocialLinks';
 
 export function Hero() {
 
@@ -32,6 +33,8 @@ export function Hero() {
                         <p className="text-lg text-text/60 max-w-xl leading-relaxed">
                             mis pelotas morenas
                         </p>
+
+                        <SocialLinks />
                     </div>
                 </div>
             </div>
