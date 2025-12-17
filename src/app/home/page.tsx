@@ -6,7 +6,7 @@ import { Experience } from "./components/Experience/Experience";
 export function HomePage() {
 
     return (
-        <div>
+        <>
 
             <Hero />
 
@@ -16,7 +16,7 @@ export function HomePage() {
 
             <Experience />
 
-        </div>
+        </>
     )
 
 }

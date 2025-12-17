@@ -6,24 +6,25 @@ export function ScrollIndicator() {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
+        // Find the scrollable container (the layout div with overflow-y-scroll)
+        const scrollContainer = document.querySelector('.snap-y') as HTMLElement;
+        if (!scrollContainer) return;
+
         const handleScroll = () => {
-            const sections = document.querySelectorAll('section[id]');
-            if (sections.length === 0) return;
+            // Check if we're near the bottom of the scrollable container
+            const scrollTop = scrollContainer.scrollTop;
+            const containerHeight = scrollContainer.clientHeight;
+            const scrollHeight = scrollContainer.scrollHeight;
 
-            const lastSection = sections[sections.length - 1];
-            const rect = lastSection.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
+            // Hide indicator if within 300px of the bottom
+            const nearBottom = scrollTop + containerHeight >= scrollHeight - 300;
 
-            // Hide if the last section is in view
-            // Consider the last section visible if its top is within the bottom half of the viewport
-            const isLastSectionVisible = rect.top < windowHeight * 0.5;
-
-            setIsVisible(!isLastSectionVisible);
+            setIsVisible(!nearBottom);
         };
 
         handleScroll(); // Check initial state
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        scrollContainer.addEventListener('scroll', handleScroll);
+        return () => scrollContainer.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handleClick = () => {
@@ -54,9 +55,8 @@ export function ScrollIndicator() {
     return (
         <button
             onClick={handleClick}
-            className={`fixed z-50 bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer transition-all duration-500 group ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-            }`}
+            className={`fixed z-50 bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer transition-all duration-500 group ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+                }`}
             aria-label="Scroll to next section"
         >
             <svg

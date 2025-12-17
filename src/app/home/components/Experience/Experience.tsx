@@ -26,21 +26,21 @@ const experience: CompanyExperience[] = [
                 position: "Salesforce Developer Ssr",
                 startDate: "Oct 2024",
                 endDate: "Presente",
-                description: "Desarrollo de soluciones Salesforce avanzadas implementando Apex, Lightning Web Components, y arquitecturas escalables. Liderazgo técnico en proyectos complejos y mentoría de desarrolladores junior.",
+                //description: "Desarrollo de soluciones Salesforce avanzadas implementando Apex, Lightning Web Components, y arquitecturas escalables. Liderazgo técnico en proyectos complejos y mentoría de desarrolladores junior.",
                 technologies: ["Salesforce", "Apex", "Lightning Web Components", "SOQL", "JavaScript", "Integration"]
             },
             {
                 position: "Salesforce Developer Jr",
                 startDate: "Jun 2023",
                 endDate: "Sept 2024",
-                description: "Desarrollo de componentes personalizados con Lightning Web Components, implementación de lógica de negocio con Apex, y configuración de flujos automatizados. Integración de sistemas externos vía APIs REST.",
+                //description: "Desarrollo de componentes personalizados con Lightning Web Components, implementación de lógica de negocio con Apex, y configuración de flujos automatizados. Integración de sistemas externos vía APIs REST.",
                 technologies: ["Salesforce", "Apex", "LWC", "Salesforce Flows", "REST APIs", "SOQL"]
             },
             {
                 position: "Salesforce Developer Trainee",
                 startDate: "Feb 2023",
                 endDate: "May 2023",
-                description: "Aprendizaje y desarrollo en la plataforma Salesforce. Implementación de triggers, clases Apex, y personalización de objetos estándar. Certificación como Salesforce Platform Developer I.",
+                //description: "Aprendizaje y desarrollo en la plataforma Salesforce. Implementación de triggers, clases Apex, y personalización de objetos estándar. Certificación como Salesforce Platform Developer I.",
                 technologies: ["Salesforce", "Apex", "Triggers", "SOQL", "Salesforce Admin"]
             },
             {

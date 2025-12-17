@@ -33,7 +33,7 @@ export function Section({
     };
 
     return (
-        <section className="py-20 px-6" id={id}>
+        <section className="py-20 px-6 snap-start" id={id}>
             <div className={`${maxWidthClasses[maxWidth]} mx-auto`}>
                 {/* Section Header */}
                 <div className={`text-center ${headerSpacingClasses[headerSpacing]}`}>

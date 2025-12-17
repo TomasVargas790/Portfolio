@@ -1,17 +1,11 @@
 import { AnimatedBackground } from './Hero/AnimatedBackground';
 import { ProfileImage } from './Hero/ProfileImage';
-import { CTAButtons } from './Hero/CTAButtons';
 import { ScrollIndicator } from './Hero/ScrollIndicator';
-
-const ctaButtons = [
-    { href: '#projects', label: 'Ver Proyectos', variant: 'primary' as const },
-    { href: '#contact', label: 'Contacto', variant: 'outline' as const }
-];
 
 export function Hero() {
 
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden snap-start">
             <AnimatedBackground />
 
             {/* Content */}
@@ -38,8 +32,6 @@ export function Hero() {
                         <p className="text-lg text-text/60 max-w-xl leading-relaxed">
                             mis pelotas morenas
                         </p>
-
-                        <CTAButtons buttons={ctaButtons} />
                     </div>
                 </div>
             </div>
