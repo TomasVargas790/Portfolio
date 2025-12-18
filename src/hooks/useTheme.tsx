@@ -1,8 +1,16 @@
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
 type Theme = 'light' | 'dark';
 
-export function useTheme() {
+interface ThemeContextType {
+    theme: Theme;
+    toggleTheme: () => void;
+    mounted: boolean;
+}
+
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+export function ThemeProvider({ children }: { children: ReactNode }) {
     const [theme, setTheme] = useState<Theme>('dark');
     const [mounted, setMounted] = useState(false);
 
@@ -24,5 +32,17 @@ export function useTheme() {
         document.documentElement.style.colorScheme = newTheme;
     };
 
-    return { theme, toggleTheme, mounted };
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme, mounted }}>
+            {children}
+        </ThemeContext.Provider>
+    );
+}
+
+export function useTheme() {
+    const context = useContext(ThemeContext);
+    if (context === undefined) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
 }
