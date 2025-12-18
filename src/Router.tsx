@@ -1,7 +1,7 @@
 import { Router, Route } from "wouter"
 import { HomePage } from "./app/home/page"
 import { ContactPage } from "./app/contact/page"
-import RootLayout from "./app/layout"
+import RootLayout from "./layout"
 
 export default function AppRouter() {
     return (
