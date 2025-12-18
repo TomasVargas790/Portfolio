@@ -3,29 +3,39 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiSalesforce, SiLeetcode } from 'react-icons/si';
 
-export function SocialLinks() {
-    const links = [
+interface SocialLinksProps {
+    /** Array of link names to include. If not provided, shows all links */
+    include?: ('GitHub' | 'LinkedIn' | 'Trailhead' | 'LeetCode')[];
+}
+
+export function SocialLinks({ include }: SocialLinksProps) {
+    const allLinks = [
         {
-            name: 'GitHub',
+            name: 'GitHub' as const,
             url: 'https://github.com/TomasVargas790',
             icon: FaGithub,
         },
         {
-            name: 'LinkedIn',
+            name: 'LinkedIn' as const,
             url: 'https://www.linkedin.com/in/tom%C3%A1s-vargas-064406247/',
             icon: FaLinkedin,
         },
         {
-            name: 'Trailhead',
+            name: 'Trailhead' as const,
             url: 'https://www.salesforce.com/trailblazer/tvargas14',
             icon: SiSalesforce,
         },
         {
-            name: 'LeetCode',
+            name: 'LeetCode' as const,
             url: 'https://leetcode.com/u/ElTomatote/',
             icon: SiLeetcode,
         },
     ];
+
+    // Filter links based on include prop
+    const links = include
+        ? allLinks.filter(link => include.includes(link.name))
+        : allLinks;
 
     return (
         <div className="flex gap-4 justify-center md:justify-start">

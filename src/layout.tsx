@@ -1,10 +1,10 @@
-import { Footer } from "../components/Footer";
-import { ThemeToggle } from "../components/ThemeToggle";
+import { Footer } from "./components/Footer";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 // Layout principal que envuelve todas las páginas
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="h-screen overflow-y-scroll snap-y snap-proximity bg-gradient-to-b from-background via-background to-primary-900/10 text-text">
+        <div className="h-screen overflow-y-scroll snap-y snap-normal bg-gradient-to-b from-background via-background/95 to-primary-900/5 text-text">
             <ThemeToggle />
             {/* Header/Navbar global */}
             {/* <Header /> */}
