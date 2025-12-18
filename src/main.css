@@ -7,50 +7,50 @@ html {
 
 @theme {
     /* Colors - Responsive to light/dark mode */
-    --color-text: light-dark(#1a1a1a, #e9e8fc);
-    --color-background: light-dark(#f5f5f5, #02010b);
-    --color-background-card: light-dark(#ffffff, #0a0a1a);
-    --color-muted: light-dark(#e5e5e5, #1a1a2e);
-    --color-muted-foreground: light-dark(#737373, #a1a1aa);
-    --color-border: light-dark(#e5e5e5, #27272a);
+    --color-text: light-dark(#2a1a1f, #e9e8fc);
+    --color-background: light-dark(#f5e6f0, #02010b);
+    --color-background-card: light-dark(#faf2f7, #0a0a1a);
+    --color-muted: light-dark(#e8d5e1, #1a1a2e);
+    --color-muted-foreground: light-dark(#6b4d5a, #a1a1aa);
+    --color-border: light-dark(#d4c0cc, #27272a);
 
-    /* Primary Color Scale */
-    --color-primary-50: hsla(250 23.4% 95% / 1);
-    --color-primary-100: hsla(250 31.2% 90% / 1);
-    --color-primary-200: hsla(250 39% 85% / 1);
-    --color-primary-300: hsla(250 50.7% 80% / 1);
-    --color-primary-400: hsla(250 62.4% 73% / 1);
-    --color-primary-500: hsla(250 78% 70% / 1);
-    --color-primary-600: hsla(250 74.1% 64% / 1);
-    --color-primary-700: hsla(250 70.2% 58% / 1);
-    --color-primary-800: hsla(250 66.3% 52% / 1);
-    --color-primary-900: hsla(250 62.4% 45% / 1);
+    /* Primary Color Scale - Vibrant Orange */
+    --color-primary-50: hsla(25 30% 95% / 1);
+    --color-primary-100: hsla(25 38% 88% / 1);
+    --color-primary-200: hsla(25 46% 80% / 1);
+    --color-primary-300: hsla(25 58% 72% / 1);
+    --color-primary-400: hsla(25 70% 65% / 1);
+    --color-primary-500: hsla(25 85% 60% / 1);
+    --color-primary-600: hsla(25 81% 54% / 1);
+    --color-primary-700: hsla(25 77% 48% / 1);
+    --color-primary-800: hsla(25 73% 42% / 1);
+    --color-primary-900: hsla(25 69% 36% / 1);
     --color-primary: var(--color-primary-500);
 
-    /* Secondary Color Scale */
-    --color-secondary-50: hsla(308 23.7% 69% / 1);
-    --color-secondary-100: hsla(308 31.6% 59% / 1);
-    --color-secondary-200: hsla(308 39.5% 49% / 1);
-    --color-secondary-300: hsla(308 51.35% 42% / 1);
-    --color-secondary-400: hsla(308 63.2% 37% / 1);
-    --color-secondary-500: hsla(308 79% 34% / 1);
-    --color-secondary-600: hsla(308 75.05% 28% / 1);
-    --color-secondary-700: hsla(308 71.1% 22% / 1);
-    --color-secondary-800: hsla(308 67.15% 16% / 1);
-    --color-secondary-900: hsla(308 63.2% 10% / 1);
+    /* Secondary Color Scale - Deep Red */
+    --color-secondary-50: hsla(0 28% 95% / 1);
+    --color-secondary-100: hsla(0 36% 85% / 1);
+    --color-secondary-200: hsla(0 44% 75% / 1);
+    --color-secondary-300: hsla(0 56% 68% / 1);
+    --color-secondary-400: hsla(0 68% 62% / 1);
+    --color-secondary-500: hsla(0 84% 58% / 1);
+    --color-secondary-600: hsla(0 80% 52% / 1);
+    --color-secondary-700: hsla(0 76% 46% / 1);
+    --color-secondary-800: hsla(0 72% 40% / 1);
+    --color-secondary-900: hsla(0 68% 34% / 1);
     --color-secondary: var(--color-secondary-500);
 
-    /* Accent Color Scale */
-    --color-accent-50: hsla(323 24.6% 94% / 1);
-    --color-accent-100: hsla(323 32.8% 84% / 1);
-    --color-accent-200: hsla(323 41% 74% / 1);
-    --color-accent-300: hsla(323 53.3% 67% / 1);
-    --color-accent-400: hsla(323 65.6% 62% / 1);
-    --color-accent-500: hsla(323 82% 59% / 1);
-    --color-accent-600: hsla(323 77.9% 53% / 1);
-    --color-accent-700: hsla(323 73.8% 47% / 1);
-    --color-accent-800: hsla(323 69.7% 41% / 1);
-    --color-accent-900: hsla(323 65.6% 34% / 1);
+    /* Accent Color Scale - Golden Yellow */
+    --color-accent-50: hsla(45 32% 96% / 1);
+    --color-accent-100: hsla(45 40% 88% / 1);
+    --color-accent-200: hsla(45 48% 80% / 1);
+    --color-accent-300: hsla(45 60% 72% / 1);
+    --color-accent-400: hsla(45 72% 65% / 1);
+    --color-accent-500: hsla(45 88% 62% / 1);
+    --color-accent-600: hsla(45 84% 56% / 1);
+    --color-accent-700: hsla(45 80% 50% / 1);
+    --color-accent-800: hsla(45 76% 44% / 1);
+    --color-accent-900: hsla(45 72% 38% / 1);
     --color-accent: var(--color-accent-500);
 
     /* Border Radius */

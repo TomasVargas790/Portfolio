@@ -1,0 +1,142 @@
+/* ========================================
+   🌌 SPACE BACKGROUND - Beautiful Starfield
+   ======================================== */
+
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* ========================================
+   ⭐ STARS - Dynamic generation
+   ======================================== */
+
+.stars-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    animation: twinkleScroll var(--duration, 100s) linear infinite, twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes twinkleScroll {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+/* ========================================
+   🌌 NEBULA - Colorful space clouds
+   ======================================== */
+
+.nebula {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 30% 40%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(255, 105, 180, 0.12) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 80%, rgba(75, 0, 130, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 20%, rgba(147, 112, 219, 0.1) 0%, transparent 40%),
+        radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    animation: nebulaPulse 20s ease-in-out infinite alternate;
+    opacity: 0.6;
+}
+
+@keyframes nebulaPulse {
+    0% {
+        opacity: 0.4;
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: scale(1.1) rotate(3deg);
+    }
+}
+
+
+
+/* ========================================
+   ☀️ CELESTIAL SKY (Light Mode)
+   ======================================== */
+
+.celestial-sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.5) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 218, 185, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 50% 70%, rgba(221, 160, 221, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 192, 203, 0.48) 0%, transparent 42%),
+        radial-gradient(ellipse at 40% 90%, rgba(255, 228, 225, 0.42) 0%, transparent 48%);
+    animation: celestialDrift 25s ease-in-out infinite;
+}
+
+@keyframes celestialDrift {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.85;
+    }
+
+    33% {
+        transform: translate(10px, -15px) scale(1.05);
+        opacity: 0.95;
+    }
+
+    66% {
+        transform: translate(-15px, 10px) scale(0.98);
+        opacity: 0.9;
+    }
+}
+
+/* ========================================
+   ♿ ACCESSIBILITY - Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .star,
+    .shooting-star,
+    .nebula,
+    .celestial-sky {
+        animation: none !important;
+    }
+
+    .star {
+        opacity: 0.5 !important;
+    }
+}
