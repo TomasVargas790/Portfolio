@@ -12,13 +12,13 @@ export function HomePage() {
 
             <Hero />
 
-            <Studies />
+            <Experience />
 
-            <Projects />
+            <Studies />
 
             <Certifications />
 
-            <Experience />
+            <Projects />
 
             <Contact />
         </>

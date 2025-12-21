@@ -11,31 +11,22 @@ interface Project {
     featured?: boolean;
 }
 
-// Proyectos placeholder - reemplazá con tus proyectos reales
 const projects: Project[] = [
     {
-        title: "Proyecto E-Commerce",
-        description: "Plataforma de comercio electrónico completa con carrito de compras, pagos y panel de administración.",
-        image: "/projects/ecommerce.jpg", // Agregá tus imágenes en /public/projects/
-        technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-        demoUrl: "https://example.com",
-        githubUrl: "https://github.com/TomasVargas790/project",
-        featured: true,
+        title: "Sand Animation",
+        description: "Simulación interactiva de física de arena con renderizado en Canvas. Dibujá con el mouse y observá cómo las partículas caen y se acumulan de forma realista.",
+        image: "/sand.png", // Agregá screenshot después
+        technologies: ["HTML5 Canvas", "Vanilla JS", "Physics Engine"],
+        demoUrl: "https://sand.vargastomas.com",
+        //featured: true,
     },
     {
-        title: "App de Gestión",
-        description: "Sistema de gestión empresarial con dashboard, reportes y automatización de procesos.",
-        image: "/projects/management.jpg",
-        technologies: ["Next.js", "TypeScript", "Prisma", "TailwindCSS"],
-        demoUrl: "https://example.com",
-        githubUrl: "https://github.com/TomasVargas790/project",
-    },
-    {
-        title: "API RESTful",
-        description: "API robusta con autenticación JWT, documentación Swagger y tests automatizados.",
-        image: "/projects/api.jpg",
-        technologies: ["Node.js", "Express", "MongoDB", "Docker"],
-        githubUrl: "https://github.com/TomasVargas790/project",
+        title: "Space Background",
+        description: "Fondo espacial animado con nebulosas, estrellas y efectos visuales. Animaciones CSS puras combinadas con Canvas API para crear un ambiente cósmico inmersivo.",
+        image: "/space.png", // Agregá screenshot después
+        technologies: ["CSS Animations", "Canvas API", "WebGL"],
+        demoUrl: "https://space-background.vargastomas.com",
+        //featured: true,
     },
 ];
 

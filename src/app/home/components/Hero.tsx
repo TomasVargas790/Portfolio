@@ -29,11 +29,6 @@ export function Hero() {
                         <p className="text-2xl md:text-3xl text-text/80 font-light">
                             Full Stack Developer
                         </p>
-
-                        <p className="text-lg text-text/60 max-w-xl leading-relaxed">
-                            mis pelotas morenas
-                        </p>
-
                         <SocialLinks />
                     </div>
                 </div>

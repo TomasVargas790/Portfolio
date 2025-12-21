@@ -20,11 +20,11 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ company, isLast }: ExperienceCardProps) {
     return (
-        <div className="group relative flex gap-6">
+        <div className="group/row relative flex gap-6">
             {/* Timeline */}
             <div className="flex flex-col items-center">
                 {/* Circle/Dot */}
-                <div className="w-4 h-4 rounded-full bg-primary-500 ring-4 ring-background border-2 border-primary-500 z-10 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="w-4 h-4 rounded-full bg-primary-500 ring-4 ring-background border-2 border-primary-500 z-10 group-hover/row:scale-125 transition-transform duration-300"></div>
                 {/* Vertical Line */}
                 {!isLast && (
                     <div className="w-0.5 h-full bg-primary-500/30 mt-2"></div>
@@ -33,9 +33,9 @@ export function ExperienceCard({ company, isLast }: ExperienceCardProps) {
 
             {/* Content Card */}
             <div className="flex-1 pb-12">
-                <div className="group bg-background-card border border-border rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                <div className="group/card bg-background-card border border-border rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
                     {/* Glow effect on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-lg transition-all duration-300 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary-500/0 to-accent-500/0 group-hover/card:from-primary-500/5 group-hover/card:to-accent-500/5 rounded-lg transition-all duration-300 pointer-events-none"></div>
 
                     <div className="relative z-10">
                         {/* Company Header */}
