@@ -39,5 +39,9 @@ export default defineConfig({
     cssCodeSplit: true,
     reportCompressedSize: true,
     chunkSizeWarningLimit: 1000,
+    // Modulepreload para recursos críticos
+    modulePreload: {
+      polyfill: false, // Navegadores modernos no necesitan polyfill
+    },
   },
 })

@@ -1,26 +1,35 @@
-# Dockerfile de producción con pnpm (para usar con Traefik)
-FROM node:20-alpine
+# Multi-stage build: Build con Node + Servir con Nginx
+FROM node:20-alpine AS builder
 
-# Instalar pnpm globalmente
+# Instalar pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Establecer directorio de trabajo
+# Directorio de trabajo
 WORKDIR /app
 
 # Copiar archivos de dependencias
 COPY package.json pnpm-lock.yaml* ./
 
-# Instalar dependencias de producción
-RUN pnpm install --frozen-lockfile --prod
+# Instalar dependencias
+RUN pnpm install --frozen-lockfile
 
-# Copiar el resto del código
+# Copiar código fuente
 COPY . .
 
-# Construir la aplicación
+# Build de producción
 RUN pnpm build
 
-# Exponer puertos 80 y 443 para Traefik
-EXPOSE 80 443
+# Etapa de producción con nginx
+FROM nginx:alpine
 
-# Usar vite preview para servir la build en puerto 80
-CMD ["pnpm", "preview", "--host", "--port", "80"]
+# Copiar archivos build desde el stage anterior
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copiar configuración de nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Exponer puerto 80
+EXPOSE 80
+
+# Nginx se inicia automáticamente
+CMD ["nginx", "-g", "daemon off;"]

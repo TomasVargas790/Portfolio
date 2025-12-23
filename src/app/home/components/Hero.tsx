@@ -12,7 +12,7 @@ export function Hero() {
             {/* Content */}
             <div className="relative z-10 max-w-5xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-                    <ProfileImage src="/Tomi.jpg" alt="Tomás Vargas" />
+                    <ProfileImage src="/Tomi.webp" alt="Tomás Vargas" />
 
                     {/* Text Content */}
                     <div className="flex flex-col gap-6 text-center md:text-left">

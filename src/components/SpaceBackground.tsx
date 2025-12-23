@@ -13,7 +13,7 @@ export function SpaceBackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const { theme } = useTheme();
     const starsRef = useRef<Star[]>([]);
-    const animationRef = useRef<number>();
+    const animationRef = useRef<number | undefined>(undefined);
 
     useEffect(() => {
         const canvas = canvasRef.current;

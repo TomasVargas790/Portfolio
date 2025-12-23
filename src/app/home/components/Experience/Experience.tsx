@@ -18,37 +18,44 @@ interface CompanyExperience {
 
 const experience: CompanyExperience[] = [
     {
-        company: "bdtglobal",
-        totalStartDate: "Sept 2022",
+        company: "BDTGlobal",
+        totalStartDate: "Feb 2023",
         totalEndDate: "Presente",
         positions: [
             {
                 position: "Salesforce Developer Ssr",
                 startDate: "Oct 2024",
                 endDate: "Presente",
-                //description: "Desarrollo de soluciones Salesforce avanzadas implementando Apex, Lightning Web Components, y arquitecturas escalables. Liderazgo técnico en proyectos complejos y mentoría de desarrolladores junior.",
-                technologies: ["Salesforce", "Apex", "Lightning Web Components", "SOQL", "JavaScript", "Integration"]
+                description: "Desarrollo de sistema de siniestros multi-sucursal utilizado en tres portales distintos. Capacitación técnica y mentoría de pasantes y trainees. Onboarding e inducción técnica de nuevos miembros del equipo. Soporte y mantenimiento de aplicaciones productivas.",
+                technologies: ["APEX", "LWC", "Aura", "OmniStudio", "Salesforce Platform", "REST APIs"]
             },
             {
                 position: "Salesforce Developer Jr",
                 startDate: "Jun 2023",
-                endDate: "Sept 2024",
-                //description: "Desarrollo de componentes personalizados con Lightning Web Components, implementación de lógica de negocio con Apex, y configuración de flujos automatizados. Integración de sistemas externos vía APIs REST.",
-                technologies: ["Salesforce", "Apex", "LWC", "Salesforce Flows", "REST APIs", "SOQL"]
+                endDate: "Sep 2024",
+                description: "Desarrollo de plataforma pública de cotización de seguros de auto, reutilizando código legacy de consultoría previa. Desarrollo de sistema de cotización especializado para agentes de seguros con múltiples roles y flujos de trabajo. Participación en módulo de excepciones con flujos de aprobación para condiciones especiales de seguros. Implementación de reglas de negocio, persistencia de datos y logging del sistema.",
+                technologies: ["APEX", "LWC", "Aura", "OmniStudio", "REST APIs", "SOQL"]
             },
             {
                 position: "Salesforce Developer Trainee",
                 startDate: "Feb 2023",
                 endDate: "May 2023",
-                //description: "Aprendizaje y desarrollo en la plataforma Salesforce. Implementación de triggers, clases Apex, y personalización de objetos estándar. Certificación como Salesforce Platform Developer I.",
-                technologies: ["Salesforce", "Apex", "Triggers", "SOQL", "Salesforce Admin"]
+                description: "Proyecto de capacitación interna: desarrollo de sistema interno de cotización de seguros de auto. Desarrollo de APIs REST personalizadas con Apex. Integraciones con servicios de terceros (cotización, normalización). Configuración de seguridad de Salesforce usando perfiles y permission sets.",
+                technologies: ["APEX", "Salesforce Platform", "REST APIs", "Triggers", "SOQL"]
             },
+        ]
+    },
+    {
+        company: "BDTGlobal",
+        totalStartDate: "Sep 2022",
+        totalEndDate: "Dic 2022",
+        positions: [
             {
-                position: "Desarrollador Backend",
-                startDate: "Sept 2022",
-                endDate: "Nov 2022",
-                // description: "Desarrollo de APIs RESTful con Node.js y Express. Diseño e implementación de bases de datos relacionales con SQL. Integración de servicios backend con aplicaciones frontend.",
-                // technologies: ["Node.js", "SQL", "Express.js", "REST APIs", "PostgreSQL", "Git"]
+                position: "Backend Developer (Pasantía)",
+                startDate: "Sep 2022",
+                endDate: "Dic 2022",
+                description: "Desarrollo de portal de pruebas para candidatos de RRHH. Responsable del diseño de base de datos y desarrollo backend.",
+                technologies: ["PHP", "MySQL", "React"]
             },
         ]
     },

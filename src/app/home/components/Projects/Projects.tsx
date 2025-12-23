@@ -15,7 +15,7 @@ const projects: Project[] = [
     {
         title: "Sand Animation",
         description: "Simulación interactiva de física de arena con renderizado en Canvas. Dibujá con el mouse y observá cómo las partículas caen y se acumulan de forma realista.",
-        image: "/sand.png", // Agregá screenshot después
+        image: "/sand.webp", // Agregá screenshot después
         technologies: ["HTML5 Canvas", "Vanilla JS", "Physics Engine"],
         demoUrl: "https://sand.vargastomas.com",
         //featured: true,
@@ -23,7 +23,7 @@ const projects: Project[] = [
     {
         title: "Space Background",
         description: "Fondo espacial animado con nebulosas, estrellas y efectos visuales. Animaciones CSS puras combinadas con Canvas API para crear un ambiente cósmico inmersivo.",
-        image: "/space.png", // Agregá screenshot después
+        image: "/space.webp", // Agregá screenshot después
         technologies: ["CSS Animations", "Canvas API", "WebGL"],
         demoUrl: "https://space-background.vargastomas.com",
         //featured: true,

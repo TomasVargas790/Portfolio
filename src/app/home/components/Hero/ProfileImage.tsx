@@ -14,6 +14,7 @@ export function ProfileImage({ src, alt, size = 280 }: ProfileImageProps) {
                     alt={alt}
                     width={size}
                     height={size}
+                    fetchPriority="high"
                     className="relative rounded-full border-4 border-background-card shadow-2xl transform group-hover:scale-105 transition duration-500"
                 />
             </div>

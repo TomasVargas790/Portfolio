@@ -12,28 +12,20 @@ interface Study {
 
 const studies: Study[] = [
     {
-        institution: "Universidad de Buenos Aires",
-        degree: "Ingeniería en Sistemas de Información",
+        institution: "UBA - Facultad de Ingeniería",
+        degree: "Ingeniería en Informática (CBC)",
         field: "Ingeniería Informática",
-        startDate: "2023",
-        endDate: "2028",
-        description: "Formación integral en ingeniería de software, arquitectura de sistemas y desarrollo de aplicaciones."
+        startDate: "2024",
+        endDate: "Presente",
+        description: "Ciclo Básico Común de Ingeniería en Informática en la Universidad de Buenos Aires."
     },
     {
-        institution: "Escuela Técnica 32 D.E. 14 General José de San Martín",
+        institution: "ET N°32 DE 14 - Gral. San Martín",
         degree: "Técnico en Computación",
         field: "Tecnología Informática",
-        startDate: "2016",
+        startDate: "2017",
         endDate: "2022",
         description: "Formación técnica en programación, redes, bases de datos y ciberseguridad. Tecnologías: JavaScript, Python, Node.js, HTML5, CSS, MySQL, Java, PHP, Git."
-    },
-    {
-        institution: "Trailhead by Salesforce",
-        degree: "Certificaciones Salesforce",
-        field: "Desarrollo Salesforce",
-        startDate: "2022",
-        endDate: "Presente",
-        description: "Certificaciones: Platform Developer I, JavaScript Developer, Platform Foundations, Omnistudio Developer."
     },
 ];
 
