@@ -10,7 +10,6 @@ export function HomePage() {
 
     return (
         <>
-
             <Hero />
 
             <Experience />
