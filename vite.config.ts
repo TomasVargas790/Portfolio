@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: { allowedHosts: ['vargastomas.com'] },
+  server: { allowedHosts: ['vargastomas.com', 'dev.vargastomas.com'] },
   build: {
     // Minificación agresiva con terser (más efectivo que esbuild)
     minify: 'terser',
