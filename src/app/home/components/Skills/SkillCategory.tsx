@@ -6,9 +6,12 @@ interface SkillCategoryData {
 
 interface SkillCategoryProps {
     category: SkillCategoryData;
+    theme: string;
 }
 
-export function SkillCategory({ category }: SkillCategoryProps) {
+export function SkillCategory({ category, theme }: SkillCategoryProps) {
+    const isDark = theme === 'dark';
+
     return (
         <div className="card group h-full">
             <div className="card-glow"></div>
@@ -24,7 +27,10 @@ export function SkillCategory({ category }: SkillCategoryProps) {
                 {category.skills.map((skill, index) => (
                     <span
                         key={index}
-                        className="px-3 py-1.5 rounded-md text-sm font-medium bg-text/5 text-text/80 border border-text/10 transition-all duration-200 hover:bg-text/10 hover:border-text/20 hover:text-text hover:scale-[1.02]"
+                        className={`px-3 py-1.5 rounded-md text-sm font-medium backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 ${isDark
+                            ? 'bg-primary-950/30 text-primary-400 border border-primary-500/30 hover:bg-primary-500/10 hover:border-primary-400/50'
+                            : 'bg-primary-500/10 text-text border border-primary-600/30 hover:bg-primary-500/20 hover:border-primary-600/50'
+                            }`}
                     >
                         {skill}
                     </span>

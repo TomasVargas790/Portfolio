@@ -1,5 +1,6 @@
 import { Section } from '../Section';
 import { SkillCategory } from './SkillCategory';
+import { useTheme } from '../../../../hooks/useTheme';
 
 interface SkillCategoryData {
     title: string;
@@ -9,13 +10,23 @@ interface SkillCategoryData {
 
 const skillCategories: SkillCategoryData[] = [
     {
+        title: "Lenguajes de Programación",
+        icon: "💻",
+        skills: [
+            "JavaScript",
+            "TypeScript",
+            "PHP",
+            "APEX",
+            "HTML5",
+            "CSS3",
+        ]
+    },
+    {
         title: "Frontend",
         icon: "🎨",
         skills: [
-            "React Ecosystem",
+            "React",
             "Next.js",
-            "HTML5",
-            "CSS3",
             "Tailwind CSS",
             "Bootstrap",
             "Materialize",
@@ -25,12 +36,9 @@ const skillCategories: SkillCategoryData[] = [
         title: "Backend",
         icon: "⚙️",
         skills: [
-            "JavaScript",
-            "TypeScript",
             "Node.js",
             "Express",
             "NestJS",
-            "PHP",
             "CodeIgniter 3",
         ]
     },
@@ -39,7 +47,6 @@ const skillCategories: SkillCategoryData[] = [
         icon: "☁️",
         skills: [
             "Salesforce Platform",
-            "APEX",
             "Lightning Web Components (LWC)",
             "Aura",
             "OmniStudio",
@@ -47,7 +54,7 @@ const skillCategories: SkillCategoryData[] = [
         ]
     },
     {
-        title: "Databases",
+        title: "Bases de Datos",
         icon: "🗄️",
         skills: [
             "MySQL",
@@ -58,27 +65,28 @@ const skillCategories: SkillCategoryData[] = [
         ]
     },
     {
-        title: "Infraestructura",
+        title: "DevOps & Infraestructura",
         icon: "🚀",
         skills: [
             "Docker",
             "Traefik",
             "Nginx",
+            "Git",
         ]
     },
     {
-        title: "Otros",
+        title: "Herramientas & Integraciones",
         icon: "🛠️",
         skills: [
             "REST APIs",
-            "Design Patterns",
-            "Third-party Integrations",
-            "Git",
+            "Patrones de diseño",
         ]
     },
 ];
 
 export function Skills() {
+    const { theme } = useTheme();
+
     return (
         <Section
             id="skills"
@@ -89,7 +97,7 @@ export function Skills() {
             {/* Skills Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skillCategories.map((category, index) => (
-                    <SkillCategory key={index} category={category} />
+                    <SkillCategory key={index} category={category} theme={theme} />
                 ))}
             </div>
         </Section>
