@@ -6,25 +6,19 @@ export function ScrollIndicator() {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
-        // Find the scrollable container (the layout div with overflow-y-scroll)
-        const scrollContainer = document.querySelector('.snap-y') as HTMLElement;
-        if (!scrollContainer) return;
-
         const handleScroll = () => {
-            // Check if we're near the bottom of the scrollable container
-            const scrollTop = scrollContainer.scrollTop;
-            const containerHeight = scrollContainer.clientHeight;
-            const scrollHeight = scrollContainer.scrollHeight;
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
 
-            // Hide indicator if within 300px of the bottom
-            const nearBottom = scrollTop + containerHeight >= scrollHeight - 300;
+            const nearBottom = scrollTop + windowHeight >= documentHeight - 300;
 
             setIsVisible(!nearBottom);
         };
 
-        handleScroll(); // Check initial state
-        scrollContainer.addEventListener('scroll', handleScroll);
-        return () => scrollContainer.removeEventListener('scroll', handleScroll);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handleClick = () => {
