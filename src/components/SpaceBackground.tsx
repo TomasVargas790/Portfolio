@@ -112,7 +112,7 @@ function CanvasStarfield({ theme }: { theme: string }) {
         // ========================================
         // ⭐ Initialize Stars
         // ========================================
-        const numStars = 800;
+        const numStars = 400;
         if (starsRef.current.length === 0) {
             for (let i = 0; i < numStars; i++) {
                 starsRef.current.push({

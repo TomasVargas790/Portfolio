@@ -23,6 +23,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
         setTheme(initialTheme);
         document.documentElement.style.colorScheme = initialTheme;
+        document.documentElement.classList.toggle('dark', initialTheme === 'dark');
     }, []);
 
     const toggleTheme = () => {
@@ -30,6 +31,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);
         document.documentElement.style.colorScheme = newTheme;
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
     };
 
     return (
