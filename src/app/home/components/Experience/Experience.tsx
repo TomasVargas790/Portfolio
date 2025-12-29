@@ -26,7 +26,7 @@ const experience: CompanyExperience[] = [
                 position: "Salesforce Developer Ssr",
                 startDate: "Oct 2024",
                 endDate: "Presente",
-                description: "Desarrollo de sistema de siniestros multi-sucursal utilizado en tres portales distintos. Capacitación técnica y mentoría de pasantes y trainees. Onboarding e inducción técnica de nuevos miembros del equipo. Soporte y mantenimiento de aplicaciones productivas.",
+                description: "Desarrollo de sistema de denuncia de siniestros para múltiples ramos. Desarrollo de Web Services en Apex. Capacitación técnica y mentoría de pasantes y trainees. Onboarding e inducción técnica de nuevos miembros del equipo. Soporte y mantenimiento de aplicaciones productivas.",
                 technologies: ["APEX", "LWC", "Aura", "OmniStudio", "Salesforce Platform", "REST APIs"]
             },
             {

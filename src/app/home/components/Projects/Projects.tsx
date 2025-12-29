@@ -14,17 +14,17 @@ interface Project {
 const projects: Project[] = [
     {
         title: "Sand Animation",
-        description: "Simulación interactiva de física de arena con renderizado en Canvas. Dibujá con el mouse y observá cómo las partículas caen y se acumulan de forma realista.",
+        description: "Simulador interactivo de arena en Canvas. Las partículas tienen física propia: caen y se apilan formando montículos naturales, igual que la arena real.",
         image: "/sand.webp", // Agregá screenshot después
-        technologies: ["HTML5 Canvas", "Vanilla JS", "Physics Engine"],
+        technologies: ["HTML5 Canvas", "Physics Engine", "Simulation"],
         demoUrl: "https://sand.vargastomas.com",
         //featured: true,
     },
     {
         title: "Space Background",
-        description: "Fondo espacial animado con nebulosas, estrellas y efectos visuales. Animaciones CSS puras combinadas con Canvas API para crear un ambiente cósmico inmersivo.",
+        description: "Fondo espacial minimalista y eficiente. JS genera las partículas y CSS se encarga del movimiento, logrando un efecto de profundidad infinito consumiendo muy pocos recursos.",
         image: "/space.webp", // Agregá screenshot después
-        technologies: ["CSS Animations", "Canvas API", "WebGL"],
+        technologies: ["CSS Animations", "Procedural Generation", "Vanilla JS"],
         demoUrl: "https://space-background.vargastomas.com",
         //featured: true,
     },
