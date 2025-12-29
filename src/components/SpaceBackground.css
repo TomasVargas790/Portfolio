@@ -41,13 +41,8 @@
     overflow: hidden;
 }
 
-.background-waves-container.theme-dark {
-    background: linear-gradient(180deg, #0a0a1a 0%, #1a0a2e 50%, #2d1b4e 100%);
-}
+/* Theme classes are still used for child elements (waves fill), but container is transparent */
 
-.background-waves-container.theme-light {
-    background: linear-gradient(180deg, #fef3f5 0%, #fce4ec 80%, #f8bbd0 100%);
-}
 
 .waves-svg {
     position: absolute;
