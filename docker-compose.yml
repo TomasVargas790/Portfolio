@@ -19,6 +19,7 @@ services:
       - "traefik.http.routers.portfolio-https.rule=Host(`vargastomas.com`)"
       - "traefik.http.routers.portfolio-https.entrypoints=websecure"
       - "traefik.http.routers.portfolio-https.tls.certresolver=myresolver"
+      - "traefik.http.routers.portfolio-https.middlewares=security-headers-strict@file"
     
       # Service configuration
       - "traefik.http.services.portfolio.loadbalancer.server.port=80"
