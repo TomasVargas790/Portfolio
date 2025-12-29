@@ -13,8 +13,8 @@ interface Study {
 const studies: Study[] = [
     {
         institution: "UBA - Facultad de Ingeniería",
-        degree: "Ingeniería en Informática (CBC)",
-        field: "Ingeniería Informática",
+        degree: "Ingeniería en Informática",
+        field: "",
         startDate: "2024",
         endDate: "Presente",
         description: "Ciclo Básico Común de Ingeniería en Informática en la Universidad de Buenos Aires."
@@ -22,7 +22,7 @@ const studies: Study[] = [
     {
         institution: "ET N°32 DE 14 - Gral. San Martín",
         degree: "Técnico en Computación",
-        field: "Tecnología Informática",
+        field: "",
         startDate: "2017",
         endDate: "2022",
         description: "Formación técnica en programación, redes, bases de datos y ciberseguridad. Tecnologías: JavaScript, Python, Node.js, HTML5, CSS, MySQL, Java, PHP, Git."
