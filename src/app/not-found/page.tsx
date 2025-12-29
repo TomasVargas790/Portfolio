@@ -1,5 +1,5 @@
 import { Link } from "wouter"
-import { Home, ArrowLeft } from "lucide-react"
+import { Home } from "lucide-react"
 
 export function NotFoundPage() {
     return (
